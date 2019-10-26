@@ -1,0 +1,7 @@
+@mixin counter() {
+  .counter {
+    color: red;
+  }
+};
+
+@include counter();

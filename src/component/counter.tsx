@@ -8,6 +8,8 @@ import { ICounterProps, ICounterState } from '../interface/counter-interface';
 import { func } from 'prop-types';
 import { mapDispatchToProps } from '../store/bindActionCreators';
 
+import './counter.scss'
+
 class CounterComponent extends React.Component<ICounterProps, ICounterState> {
   constructor(props) {
     super(props);
@@ -21,7 +23,7 @@ class CounterComponent extends React.Component<ICounterProps, ICounterState> {
     let {add2} = this.props;
       return (
       <div>
-        <p>{this.props.number}</p>
+        <p className="counter">{this.props.number}</p>
         {/* <button  onClick={()=>this.setState({number:this.state.number + 1})}>+</button> */}
         <button onClick={this.add}>+++</button>
         <button onClick={add2}>+++</button>
