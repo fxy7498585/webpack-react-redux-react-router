@@ -8,6 +8,8 @@ import store from './store';
 
 import App from './app/App'
 
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 
 
 ReactDom.render(

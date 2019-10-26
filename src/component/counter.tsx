@@ -9,6 +9,7 @@ import { func } from 'prop-types';
 import { mapDispatchToProps } from '../store/bindActionCreators';
 
 import './counter.scss'
+import { DatePicker } from 'antd';
 
 class CounterComponent extends React.Component<ICounterProps, ICounterState> {
   constructor(props) {
@@ -23,6 +24,7 @@ class CounterComponent extends React.Component<ICounterProps, ICounterState> {
     let {add2} = this.props;
       return (
       <div>
+        <DatePicker></DatePicker>
         <p className="counter">{this.props.number}</p>
         {/* <button  onClick={()=>this.setState({number:this.state.number + 1})}>+</button> */}
         <button onClick={this.add}>+++</button>
