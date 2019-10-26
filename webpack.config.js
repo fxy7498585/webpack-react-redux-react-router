@@ -43,7 +43,12 @@ module.exports = {
 
   devServer:{
     hot:true,
-    contentBase:path.resolve(__dirname,'dist')
+    contentBase:path.resolve(__dirname,'dist'),
+
+    // 无论访问什么路径都会重定向到index.html
+    historyApiFallback: {
+      index: './index.html'
+    }
   }
 
 }

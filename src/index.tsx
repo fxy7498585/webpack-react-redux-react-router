@@ -6,13 +6,13 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 
-import CounterComponent from './component/counter';
-import CounterComponent2 from './component/couter2'
+import App from './app/App'
+
+
 
 ReactDom.render(
   <Provider store={store}>
-    <CounterComponent />
-    <CounterComponent2 />
+    <App />
   </Provider>,
   document.getElementById("app")
 )

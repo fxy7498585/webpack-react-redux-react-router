@@ -2,6 +2,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 
 import actions from '../store/action/couter';
+import { withRouter } from 'react-router';
 import { Store, Counter } from '../types';
 import { ICounterProps, ICounterState } from '../interface/counter-interface';
 import { func } from 'prop-types';
@@ -24,9 +25,16 @@ class CounterComponent extends React.Component<ICounterProps, ICounterState> {
         {/* <button  onClick={()=>this.setState({number:this.state.number + 1})}>+</button> */}
         <button onClick={this.add}>+++</button>
         <button onClick={add2}>+++</button>
+        <button onClick={this.goto}>goto</button>
       </div>
     )
   }
+
+  goto = () => {
+    console.log(1);
+    console.log(this.props.history.push('./counter2'));
+  }
+
   add = () => {
     this.props.add();
   }
@@ -46,4 +54,4 @@ let mapStateToProps = function(state: Store): Counter {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CounterComponent);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CounterComponent));
