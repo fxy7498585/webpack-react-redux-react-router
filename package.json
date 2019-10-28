@@ -36,6 +36,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.1",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
@@ -54,7 +55,14 @@
   },
   "babel": {
     "plugins": [
-      ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "libraryDirectory": "es",
+          "style": "css"
+        }
+      ]
     ]
   }
 }

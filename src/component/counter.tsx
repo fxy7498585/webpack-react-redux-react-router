@@ -23,7 +23,8 @@ class CounterComponent extends React.Component<ICounterProps, ICounterState> {
     console.log('props', this.props);
     let {add2} = this.props;
       return (
-      <div>
+      <div className="divD">
+        <div className="oooo"></div>
         <DatePicker></DatePicker>
         <p className="counter">{this.props.number}</p>
         {/* <button  onClick={()=>this.setState({number:this.state.number + 1})}>+</button> */}
